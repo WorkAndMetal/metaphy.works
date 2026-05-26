@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Best Guides in Turkey (Draft v1)
 
-## Getting Started
+Premium-style landing page draft for selling guided Turkey experiences to international tourists.
 
-First, run the development server:
+## Tech Stack
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS (v4)
+- Lucide Icons
 
+## Positioning Research Used in This Draft
+1. International travelers for Turkey often need direct local guidance and itinerary confidence.
+2. Premium audience expects private, personalized, high-touch planning.
+3. WhatsApp-first communication reduces friction and improves conversion for cross-border leads.
+4. Website should focus on trust, curated packages, and direct lead capture (not online checkout).
+
+## Local Setup
+
+Install dependencies (already done once during setup):
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Optional environment variable for WhatsApp:
+```bash
+NEXT_PUBLIC_WHATSAPP_NUMBER=905xxxxxxxxx
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Run dev server for local network testing:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This serves on `0.0.0.0:3000`, so devices on your local network can open:
 
-## Learn More
+```text
+http://YOUR_LOCAL_IP:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+Find your local IP on macOS:
+```bash
+ipconfig getifaddr en0
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Current Scope (Draft v1)
+- English-language premium homepage
+- Signature tour sections
+- Click-through Istanbul tour detail page (`/istanbul`) with landmark gallery
+- Click-through Cappadocia tour detail page (`/cappadocia`) with landmark gallery
+- Click-through Aegean Coast tour detail page (`/aegean-coast`) with landmark gallery
+- WhatsApp CTA-driven lead flow
+- TÜRSAB license image placeholder section
+- No on-site payment flow
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Backup Created
+- `backups/pre-istanbul-gallery-20260509-0131.tar.gz`
+- `backups/pre-cappadocia-aegean-gallery-20260509-0216.tar.gz`
 
-## Deploy on Vercel
+## Scripts
+- `npm run dev` → LAN testing (`0.0.0.0:3000`)
+- `npm run dev:localhost` → only local machine (`127.0.0.1:3000`)
+- `npm run lint`
+- `npm run build`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Next Iteration Ideas
+- Real tour detail pages
+- Real photos and media optimization
+- Multi-language support (EN default, optional TR/AR/RU)
+- WhatsApp lead tagging and CRM integration
