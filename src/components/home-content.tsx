@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
+  ArrowLeft,
   ArrowRight,
   BadgeCheck,
   CalendarDays,
@@ -64,6 +66,68 @@ const copy = {
         price: "€600",
         href: "/kusadasi",
         galleryLabel: "View Kusadasi gallery",
+      },
+    ],
+    aboutTitle: "About us",
+    aboutBody:
+      "Best Guides in Turkey is a boutique team of licensed guides and local travel designers. We craft private itineraries that balance culture, comfort, and authentic local moments.",
+    aboutPrevLabel: "Previous image",
+    aboutNextLabel: "Next image",
+    aboutSlideLabel: "Go to image",
+    aboutHighlights: [
+      "Licensed local guides",
+      "Tailor-made itineraries",
+      "On-trip WhatsApp support",
+    ],
+    aboutSlides: [
+      {
+        src: "/images/istanbul/kapali-carsi.jpg",
+        alt: "Grand Bazaar in Istanbul",
+      },
+      {
+        src: "/images/istanbul/misir-carsisi.jpg",
+        alt: "Spice Bazaar in Istanbul",
+      },
+      {
+        src: "/images/istanbul/topkapi-sarayi.jpg",
+        alt: "Topkapi Palace in Istanbul",
+      },
+      {
+        src: "/images/istanbul/ayasofya.jpg",
+        alt: "Hagia Sophia in Istanbul",
+      },
+      {
+        src: "/images/istanbul/sultanahmet.jpg",
+        alt: "Sultanahmet Mosque in Istanbul",
+      },
+    ],
+    galleryTitle: "Photo gallery",
+    galleryBody:
+      "A quick look at the places and moments we curate across Turkey.",
+    galleryImages: [
+      {
+        src: "/images/istanbul/sultanahmet.jpg",
+        alt: "Sultanahmet in Istanbul",
+      },
+      {
+        src: "/images/istanbul/ayasofya.jpg",
+        alt: "Hagia Sophia exterior",
+      },
+      {
+        src: "/images/cappadocia/cappadocia-hot-air-balloons.jpg",
+        alt: "Cappadocia hot air balloons",
+      },
+      {
+        src: "/images/cappadocia/goreme-open-air-museum.jpg",
+        alt: "Goreme Open Air Museum",
+      },
+      {
+        src: "/images/kusadasi/ephesus.jpg",
+        alt: "Ephesus ruins",
+      },
+      {
+        src: "/images/kusadasi/ladies-beach.jpg",
+        alt: "Ladies Beach in Kusadasi",
       },
     ],
     whyTitle: "Why premium travelers choose us",
@@ -162,6 +226,68 @@ const copy = {
         galleryLabel: "Kuşadası galerisini gör",
       },
     ],
+    aboutTitle: "Hakkımızda",
+    aboutBody:
+      "Best Guides in Turkey, lisanslı rehberler ve yerel seyahat tasarımcılarından oluşan butik bir ekiptir. Kültür, konfor ve özgün deneyimleri bir araya getiren özel rotalar hazırlarız.",
+    aboutPrevLabel: "Önceki fotoğraf",
+    aboutNextLabel: "Sonraki fotoğraf",
+    aboutSlideLabel: "Fotoğraf",
+    aboutHighlights: [
+      "Lisanslı yerel rehberler",
+      "Kişiye özel programlar",
+      "Seyahat boyunca WhatsApp desteği",
+    ],
+    aboutSlides: [
+      {
+        src: "/images/istanbul/kapali-carsi.jpg",
+        alt: "İstanbul Kapalıçarşı",
+      },
+      {
+        src: "/images/istanbul/misir-carsisi.jpg",
+        alt: "İstanbul Mısır Çarşısı",
+      },
+      {
+        src: "/images/istanbul/topkapi-sarayi.jpg",
+        alt: "Topkapı Sarayı",
+      },
+      {
+        src: "/images/istanbul/ayasofya.jpg",
+        alt: "Ayasofya",
+      },
+      {
+        src: "/images/istanbul/sultanahmet.jpg",
+        alt: "Sultanahmet Camii",
+      },
+    ],
+    galleryTitle: "Fotoğraf galerisi",
+    galleryBody:
+      "Türkiye boyunca hazırladığımız deneyimlerden kısa bir seçki.",
+    galleryImages: [
+      {
+        src: "/images/istanbul/sultanahmet.jpg",
+        alt: "İstanbul Sultanahmet",
+      },
+      {
+        src: "/images/istanbul/ayasofya.jpg",
+        alt: "Ayasofya dış görünümü",
+      },
+      {
+        src: "/images/cappadocia/cappadocia-hot-air-balloons.jpg",
+        alt: "Kapadokya sıcak hava balonları",
+      },
+      {
+        src: "/images/cappadocia/goreme-open-air-museum.jpg",
+        alt: "Göreme Açık Hava Müzesi",
+      },
+      {
+        src: "/images/kusadasi/ephesus.jpg",
+        alt: "Efes antik kenti",
+      },
+      {
+        src: "/images/kusadasi/ladies-beach.jpg",
+        alt: "Kuşadası Kadınlar Denizi",
+      },
+    ],
     whyTitle: "Premium gezginler neden bizi seçiyor",
     whyBullets: [
       "İlgi alanı ve temponuza göre özel rehber eşleştirmesi.",
@@ -217,7 +343,12 @@ export default function HomeContent() {
   const { language } = useLanguage();
   const t = copy[language];
   const signatureTours = t.signatureTours;
+  const aboutHighlights = t.aboutHighlights;
+  const aboutSlides = t.aboutSlides;
+  const galleryImages = t.galleryImages;
   const planningFlow = t.planningFlow;
+  const [aboutSlideIndex, setAboutSlideIndex] = useState(0);
+  const aboutSlidesCount = aboutSlides.length;
 
   const fallbackWhatsapp = "905321646782";
   const configuredWhatsapp = (
@@ -226,6 +357,36 @@ export default function HomeContent() {
   const whatsappNumber = configuredWhatsapp || fallbackWhatsapp;
   const whatsappText = encodeURIComponent(t.whatsappText);
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
+
+  useEffect(() => {
+    if (!aboutSlidesCount) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setAboutSlideIndex((current) => (current + 1) % aboutSlidesCount);
+    }, 4500);
+
+    return () => clearInterval(interval);
+  }, [aboutSlidesCount]);
+
+  const handleAboutPrev = () => {
+    if (!aboutSlidesCount) {
+      return;
+    }
+
+    setAboutSlideIndex(
+      (current) => (current - 1 + aboutSlidesCount) % aboutSlidesCount
+    );
+  };
+
+  const handleAboutNext = () => {
+    if (!aboutSlidesCount) {
+      return;
+    }
+
+    setAboutSlideIndex((current) => (current + 1) % aboutSlidesCount);
+  };
 
   return (
     <div className="relative isolate overflow-hidden">
@@ -352,6 +513,104 @@ export default function HomeContent() {
                 </Link>
               );
             })}
+          </div>
+        </section>
+
+        <section id="about" className="grid gap-4 md:grid-cols-[1.1fr_0.9fr]">
+          <article className={frostedPanel}>
+            <h2 className="text-2xl font-semibold text-[#0a1f44]">
+              {t.aboutTitle}
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-[#1b3160]">
+              {t.aboutBody}
+            </p>
+            <ul className="mt-4 space-y-2 text-sm text-[#1b3160]">
+              {aboutHighlights.map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <BadgeCheck className="mt-0.5 size-4 shrink-0 text-emerald-300" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </article>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10">
+            {aboutSlides.map((slide, index) => (
+              <div
+                key={slide.src}
+                className={`absolute inset-0 transition-opacity duration-700 ${
+                  index === aboutSlideIndex ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                <Image
+                  src={slide.src}
+                  alt={slide.alt}
+                  fill
+                  sizes="(min-width: 768px) 40vw, 100vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/0 to-transparent" />
+              </div>
+            ))}
+            <div className="absolute inset-x-0 bottom-3 flex items-center justify-between px-3">
+              <button
+                type="button"
+                onClick={handleAboutPrev}
+                aria-label={t.aboutPrevLabel}
+                className="inline-flex size-9 items-center justify-center rounded-full bg-white/80 text-[#0a1f44] transition hover:bg-white"
+              >
+                <ArrowLeft className="size-4" />
+              </button>
+              <div className="flex items-center gap-2">
+                {aboutSlides.map((_, index) => (
+                  <button
+                    key={`${t.aboutSlideLabel}-${index}`}
+                    type="button"
+                    onClick={() => setAboutSlideIndex(index)}
+                    aria-label={`${t.aboutSlideLabel} ${index + 1}`}
+                    className={`h-2 w-2 rounded-full transition ${
+                      index === aboutSlideIndex
+                        ? "bg-white"
+                        : "bg-white/50 hover:bg-white/80"
+                    }`}
+                  />
+                ))}
+              </div>
+              <button
+                type="button"
+                onClick={handleAboutNext}
+                aria-label={t.aboutNextLabel}
+                className="inline-flex size-9 items-center justify-center rounded-full bg-white/80 text-[#0a1f44] transition hover:bg-white"
+              >
+                <ArrowRight className="size-4" />
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section id="gallery" className="space-y-5">
+          <div>
+            <h2 className="text-2xl font-semibold text-[#0a1f44] md:text-3xl">
+              {t.galleryTitle}
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm text-[#1b3160]">
+              {t.galleryBody}
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+            {galleryImages.map((image) => (
+              <div
+                key={image.src}
+                className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(min-width: 768px) 30vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            ))}
           </div>
         </section>
 
