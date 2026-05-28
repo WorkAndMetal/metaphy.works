@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -32,12 +33,15 @@ const copy = {
       "WhatsApp-first communication shortens decision time and builds trust for international guests.",
     ],
     toursTitle: "Draft signature tours",
+    priceLabel: "Reference price",
     signatureTours: [
       {
         title: "Istanbul Heritage & Bosphorus",
         duration: "2-3 days",
         summary:
           "Private Ottoman and Byzantine highlights, curated food stops, and sunset Bosphorus moments.",
+        image: "/images/istanbul/sultanahmet.jpg",
+        price: "€300",
         href: "/istanbul",
         galleryLabel: "View Istanbul gallery",
       },
@@ -46,6 +50,8 @@ const copy = {
         duration: "2 days",
         summary:
           "Sunrise valleys, boutique cave hotel guidance, artisan ateliers, and photo-ready scenic routes.",
+        image: "/images/cappadocia/cappadocia-hot-air-balloons.jpg",
+        price: "€500",
         href: "/cappadocia",
         galleryLabel: "View Cappadocia gallery",
       },
@@ -54,6 +60,8 @@ const copy = {
         duration: "2-3 days",
         summary:
           "Ephesus, Sirince, and Kusadasi seaside highlights with a relaxed premium pace.",
+        image: "/images/kusadasi/ephesus.jpg",
+        price: "€600",
         href: "/kusadasi",
         galleryLabel: "View Kusadasi gallery",
       },
@@ -121,12 +129,15 @@ const copy = {
       "WhatsApp öncelikli iletişim, karar süresini kısaltır ve uluslararası misafirlerde güven oluşturur.",
     ],
     toursTitle: "Taslak imza turlar",
+    priceLabel: "Referans fiyat",
     signatureTours: [
       {
         title: "İstanbul Mirası ve Boğaz",
         duration: "2-3 gün",
         summary:
           "Özel Osmanlı ve Bizans durakları, özenli lezzet molaları ve gün batımı Boğaz anları.",
+        image: "/images/istanbul/sultanahmet.jpg",
+        price: "€300",
         href: "/istanbul",
         galleryLabel: "İstanbul galerisini gör",
       },
@@ -135,6 +146,8 @@ const copy = {
         duration: "2 gün",
         summary:
           "Gün doğumu vadileri, butik mağara otel önerileri, zanaat atölyeleri ve fotoğrafa uygun rotalar.",
+        image: "/images/cappadocia/cappadocia-hot-air-balloons.jpg",
+        price: "€500",
         href: "/cappadocia",
         galleryLabel: "Kapadokya galerisini gör",
       },
@@ -143,6 +156,8 @@ const copy = {
         duration: "2-3 gün",
         summary:
           "Efes, Şirince ve Kuşadası sahil duraklarıyla rahat bir premium tempo.",
+        image: "/images/kusadasi/ephesus.jpg",
+        price: "€600",
         href: "/kusadasi",
         galleryLabel: "Kuşadası galerisini gör",
       },
@@ -294,10 +309,26 @@ export default function HomeContent() {
             {signatureTours.map((tour) => {
               const cardContent = (
                 <>
-                  <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-xs font-medium text-[#1b3160]">
-                    <CalendarDays className="size-3.5" />
-                    {tour.duration}
-                  </p>
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
+                    <Image
+                      src={tour.image}
+                      alt={tour.title}
+                      fill
+                      sizes="(min-width: 768px) 30vw, 100vw"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/0 to-transparent" />
+                  </div>
+                  <div className="mt-4 flex flex-wrap items-center gap-2">
+                    <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-xs font-medium text-[#1b3160]">
+                      <CalendarDays className="size-3.5" />
+                      {tour.duration}
+                    </p>
+                    <p className="inline-flex items-center gap-2 rounded-full border border-emerald-200/40 bg-emerald-200/10 px-2.5 py-1 text-xs font-semibold text-[#0a1f44]">
+                      <Crown className="size-3.5 text-amber-300" />
+                      {t.priceLabel} {tour.price}
+                    </p>
+                  </div>
                   <h3 className="mt-4 text-lg font-semibold text-[#0a1f44]">
                     {tour.title}
                   </h3>
