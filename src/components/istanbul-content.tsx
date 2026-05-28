@@ -50,31 +50,31 @@ const copy = {
   },
   tr: {
     badge: "İstanbul Premium Tur Galerisi",
-    title: "İstanbul'un ikonik semtlerini ve simge noktalarını keşfedin",
+    title: "İstanbul’un ikonik semtlerini ve simge yapılarını keşfedin",
     description:
-      "Bu sayfa, İstanbul paketinin ikinci adım detay ekranıdır. Seçili rotadan neler bekleyebileceğinizi görmek için görselleri inceleyin.",
+      "Bu sayfa, İstanbul paketinin detay vitrini. Seçtiğiniz rotada sizi nelerin beklediğini görsellerle inceleyebilirsiniz.",
     back: "Ana sayfaya dön",
-    cta: "Bu tur hakkında bilgi alın",
+    cta: "Tur hakkında bilgi alın",
     whatsappText:
-      "Merhaba Best Guides in Turkey, İstanbul turu hakkında bilgi almak istiyorum.",
+      "Merhaba, Best Guides in Turkey. İstanbul turu hakkında bilgi almak istiyorum.",
     locations: [
       {
         name: "Sultanahmet Camii",
         image: "/images/istanbul/sultanahmet.jpg",
         description:
-          "Sultanahmet'te yer alan, mavi İznik çinileriyle ünlü simgesel Osmanlı camisi.",
+          "Sultanahmet’teki, mavi İznik çinileriyle ünlü simgesel Osmanlı camisi.",
       },
       {
         name: "Ayasofya",
         image: "/images/istanbul/ayasofya.jpg",
         description:
-          "İmparatorluk mimarisi ile manevi mirasın buluştuğu dünya tarihinin başyapıtı.",
+          "İmparatorluk mimarisiyle manevi mirasın buluştuğu eşsiz bir başyapıt.",
       },
       {
         name: "Topkapı Sarayı",
         image: "/images/istanbul/topkapi-sarayi.jpg",
         description:
-          "Avluları, hazinesi ve Boğaz manzarasıyla Osmanlı sultanlarının saray ikameti.",
+          "Avluları, hazinesi ve Boğaz manzarasıyla Osmanlı sultanlarının görkemli sarayı.",
       },
       {
         name: "Kapalıçarşı",

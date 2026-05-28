@@ -18,7 +18,7 @@ const navLinks = {
     { label: "Anasayfa", href: "#hero" },
     { label: "Turlar", href: "#tours" },
     { label: "Hakkımızda", href: "#about" },
-    { label: "Fotoğraf galerisi", href: "#gallery" },
+    { label: "Fotoğraf Galerisi", href: "#gallery" },
   ],
 };
 
@@ -29,7 +29,7 @@ const whatsappCopy = {
   },
   tr: {
     label: "WhatsApp",
-    text: "Merhaba Best Guides in Turkey, özel bir tur planlamak istiyorum.",
+    text: "Merhaba, Best Guides in Turkey. Özel bir tur planlamak istiyorum.",
   },
 } as const;
 

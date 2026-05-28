@@ -177,57 +177,57 @@ const copy = {
       "Hello Best Guides in Turkey, I would like to plan a private tour.",
   },
   tr: {
-    heroLabel: "Premium Türkiye Deneyimleri",
+    heroLabel: "Türkiye’de Premium Deneyimler",
     heroTitle:
-      "Türkiye'nin en iyisini isteyen gezginler için imza niteliğinde rehberli yolculuklar.",
+      "Türkiye’nin en iyisini isteyen gezginler için özenle hazırlanmış rehberli rotalar.",
     heroDescription:
-      "Çiftler, aileler ve küçük gruplar için Türkiye'de özel, konfor odaklı seyahat planları hazırlıyoruz. Tüm planlama ve onaylar ekibimizle doğrudan WhatsApp üzerinden yapılır.",
+      "Çiftler, aileler ve küçük gruplar için konforu önceleyen özel seyahat planları hazırlıyoruz. Tüm planlama ve onaylar ekibimizle doğrudan WhatsApp üzerinden yürütülür.",
     whatsappHeader: "WhatsApp",
-    planButton: "WhatsApp'tan planla",
-    exploreButton: "Taslak turları incele",
-    researchTitle: "Araştırma destekli konumlandırma",
+    planButton: "WhatsApp’tan planla",
+    exploreButton: "Örnek turları incele",
+    researchTitle: "Veriye dayalı içgörüler",
     travelInsights: [
-      "Türkiye gezisi planlayan gezginler, rota, zamanlama ve gizli noktalar için yerel uzmanlığı tercih eder.",
-      "Premium misafirler özel rehberlik, esnek planlama ve geliş öncesi net iletişimi önemser.",
-      "WhatsApp öncelikli iletişim, karar süresini kısaltır ve uluslararası misafirlerde güven oluşturur.",
+      "Türkiye seyahati planlayanlar, rota ve zamanlamada yerel uzmanlığı tercih ediyor.",
+      "Premium misafirler özel rehberlik, esnek planlama ve yolculuk öncesi net iletişim bekliyor.",
+      "WhatsApp üzerinden hızlı iletişim, karar süresini kısaltıp güveni artırıyor.",
     ],
-    toursTitle: "Taslak imza turlar",
-    priceLabel: "Referans fiyat",
+    toursTitle: "Örnek imza turlar",
+    priceLabel: "Başlangıç fiyatı",
     signatureTours: [
       {
         title: "İstanbul Mirası ve Boğaz",
         duration: "2-3 gün",
         summary:
-          "Özel Osmanlı ve Bizans durakları, özenli lezzet molaları ve gün batımı Boğaz anları.",
+          "Osmanlı ve Bizans durakları, özenli lezzet molaları ve gün batımında Boğaz anları.",
         image: "/images/istanbul/sultanahmet.jpg",
         price: "€300",
         href: "/istanbul",
-        galleryLabel: "İstanbul galerisini gör",
+        galleryLabel: "İstanbul galerisini görüntüle",
       },
       {
         title: "Kapadokya Lüks Kaçamağı",
         duration: "2 gün",
         summary:
-          "Gün doğumu vadileri, butik mağara otel önerileri, zanaat atölyeleri ve fotoğrafa uygun rotalar.",
+          "Gün doğumu vadileri, butik mağara otel önerileri, zanaat atölyeleri ve fotoğraf dostu rotalar.",
         image: "/images/cappadocia/cappadocia-hot-air-balloons.jpg",
         price: "€500",
         href: "/cappadocia",
-        galleryLabel: "Kapadokya galerisini gör",
+        galleryLabel: "Kapadokya galerisini görüntüle",
       },
       {
         title: "Kuşadası Sahil Kaçamağı",
         duration: "2-3 gün",
         summary:
-          "Efes, Şirince ve Kuşadası sahil duraklarıyla rahat bir premium tempo.",
+          "Efes, Şirince ve Kuşadası sahil duraklarıyla sakin ve premium bir tempo.",
         image: "/images/kusadasi/ephesus.jpg",
         price: "€600",
         href: "/kusadasi",
-        galleryLabel: "Kuşadası galerisini gör",
+        galleryLabel: "Kuşadası galerisini görüntüle",
       },
     ],
     aboutTitle: "Hakkımızda",
     aboutBody:
-      "Best Guides in Turkey, lisanslı rehberler ve yerel seyahat tasarımcılarından oluşan butik bir ekiptir. Kültür, konfor ve özgün deneyimleri bir araya getiren özel rotalar hazırlarız.",
+      "Best Guides in Turkey, lisanslı rehberler ve yerel seyahat tasarımcılarından oluşan butik bir ekiptir. Kültür, konfor ve özgün deneyimleri bir araya getiren kişiye özel rotalar hazırlarız.",
     aboutPrevLabel: "Önceki fotoğraf",
     aboutNextLabel: "Sonraki fotoğraf",
     aboutSlideLabel: "Fotoğraf",
@@ -258,9 +258,9 @@ const copy = {
         alt: "Sultanahmet Camii",
       },
     ],
-    galleryTitle: "Fotoğraf galerisi",
+    galleryTitle: "Fotoğraf Galerisi",
     galleryBody:
-      "Türkiye boyunca hazırladığımız deneyimlerden kısa bir seçki.",
+      "Türkiye genelinde tasarladığımız deneyimlerden kısa bir seçki.",
     galleryImages: [
       {
         src: "/images/istanbul/sultanahmet.jpg",
@@ -287,51 +287,51 @@ const copy = {
         alt: "Kuşadası Kadınlar Denizi",
       },
     ],
-    whyTitle: "Premium gezginler neden bizi seçiyor",
+    whyTitle: "Premium misafirler neden bizi tercih ediyor",
     whyBullets: [
-      "İlgi alanı ve temponuza göre özel rehber eşleştirmesi.",
-      "Kültürel derinliği olan, daha az turistik tuzak içeren küratörlü rotalar.",
+      "İlgi alanı ve temponuza göre rehber eşleştirmesi.",
+      "Kültürel derinliği olan, turistik tuzaklardan uzak rotalar.",
       "Seyahat öncesi ve sırasında doğrudan WhatsApp iletişimi.",
-      "VIP havaalanı ve şehir içi transferleri talep üzerine organize edilir.",
+      "VIP havaalanı ve şehir içi transferleri talebe göre organize edilir.",
     ],
-    trustTitle: "Güven ve uyumluluk",
+    trustTitle: "Güven ve yetkinlik",
     trustBody:
-      "Resmi yetkilendirme ile faaliyet gösteriyoruz. TÜRSAB belgesi görseli yüklendiğinde bu bölüme eklenecektir.",
-    trustPlaceholder: "TÜRSAB belge görseli alanı",
-    planningTitle: "Planlama nasıl işler",
+      "Resmi yetkilendirmeyle çalışıyoruz. TÜRSAB lisansımız aşağıda yer alır.",
+    trustPlaceholder: "TÜRSAB lisans görseli alanı",
+    planningTitle: "Planlama nasıl ilerliyor",
     planningFlow: [
       {
         title: "Tarihlerinizi paylaşın",
         description: "Seyahat aralığınızı ve şehir listenizi WhatsApp’tan iletin.",
       },
       {
-        title: "Kişiye özel plan alın",
+        title: "Size özel planı alın",
         description:
-          "Size özel rota, rehber profili ve gün gün öneriler paylaşırız.",
+          "Size uygun rota, rehber profili ve gün gün öneriler paylaşırız.",
       },
       {
-        title: "Ekibimizle onaylayın",
+        title: "Ekibimizle netleştirin",
         description:
-          "Tüm onaylar yerel operasyon ekibimizle yürütülür.",
+          "Tüm onaylar yerel operasyon ekibimizle birlikte yürütülür.",
       },
       {
-        title: "Türkiye’yi güvenle deneyimleyin",
+        title: "Türkiye’yi keyifle deneyimleyin",
         description:
-          "Rehberiniz sahada sizi destekleyerek sorunsuz bir deneyim sağlar.",
+          "Rehberiniz sahada yanınızda olur; sorunsuz bir deneyim yaşarsınız.",
       },
     ],
     missionTitle: "Misyonumuz",
     missionBody:
-      "Güvenilir yerel rehberlerle, dengeli tempolu ve özgün özel turlar tasarlamak; net iletişim ve özenli misafir deneyimi sunmak.",
+      "Güvenilir yerel rehberlerle, dengeli tempolu ve özgün özel turlar tasarlamak; net iletişim ve özenli bir misafir deneyimi sunmak.",
     visionTitle: "Vizyonumuz",
     visionBody:
-      "Kültürel derinlik, güvenlik ve kişiselleştirilmiş yolculuklarla tanınan, Türkiye'nin en güvenilir premium rehber ağı olmak.",
+      "Kültürel derinlik, güvenlik ve kişiselleştirilmiş yolculuklarla anılan, Türkiye’nin en güvenilir premium rehber ağı olmak.",
     contactTitle: "Yolculuğunuza başlayın",
     contactBody:
       "Detaylı program, müsaitlik ve kişiye özel turlar için WhatsApp’tan bize ulaşın.",
     contactButton: "WhatsApp’tan iletişime geçin",
     whatsappText:
-      "Merhaba Best Guides in Turkey, özel bir tur planlamak istiyorum.",
+      "Merhaba, Best Guides in Turkey. Özel bir tur planlamak istiyorum.",
   },
 } as const;
 

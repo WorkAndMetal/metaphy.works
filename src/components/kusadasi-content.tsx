@@ -50,13 +50,13 @@ const copy = {
   },
   tr: {
     badge: "Kuşadası Premium Tur Galerisi",
-    title: "Kuşadası'nın sahil öne çıkanları ve yakın miras noktalarını keşfedin",
+    title: "Kuşadası’nın sahil öne çıkanlarını ve yakın miras noktalarını keşfedin",
     description:
-      "Bu sayfa, Kuşadası paketinin öne çıkan görsellerini paylaşır; şehir dışındaki miras duraklarını sahil zamanı ile birleştirir.",
+      "Bu sayfa, Kuşadası paketinin öne çıkan görsellerini sunar; sahil zamanı ile şehir dışındaki miras duraklarını bir araya getirir.",
     back: "Ana sayfaya dön",
-    cta: "Bu tur hakkında bilgi alın",
+    cta: "Tur hakkında bilgi alın",
     whatsappText:
-      "Merhaba Best Guides in Turkey, Kuşadası turu hakkında bilgi almak istiyorum.",
+      "Merhaba, Best Guides in Turkey. Kuşadası turu hakkında bilgi almak istiyorum.",
     locations: [
       {
         name: "Efes",
@@ -68,13 +68,13 @@ const copy = {
         name: "Şirince Köyü",
         image: "/images/kusadasi/sirince.jpg",
         description:
-          "Kuşadası'nın hemen dışında şirin yokuş sokakları, taş evleri ve yerel lezzetleri.",
+          "Kuşadası’nın hemen dışında, yokuş sokakları, taş evleri ve yerel lezzetleriyle ünlü.",
       },
       {
         name: "Kadınlar Denizi",
         image: "/images/kusadasi/ladies-beach.jpg",
         description:
-          "Şehre yakın, yüzme, gün batımı ve sahil kafeleri için rahat bir sahil.",
+          "Şehre yakın; yüzme, gün batımı ve sahil kafeleri için keyifli bir sahil.",
       },
       {
         name: "Güvercinada Kalesi",
@@ -86,7 +86,7 @@ const copy = {
         name: "Kuşadası Marina",
         image: "/images/kusadasi/kusadasi-marina.jpg",
         description:
-          "Yatlar, kafeler ve akşam atmosferiyle şık bir sahil yürüyüş yolu.",
+          "Yatlar, kafeler ve akşam atmosferiyle şık bir sahil yürüyüş alanı.",
       },
     ],
   },

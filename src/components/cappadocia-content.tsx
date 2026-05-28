@@ -50,19 +50,19 @@ const copy = {
   },
   tr: {
     badge: "Kapadokya Premium Tur Galerisi",
-    title: "Kapadokya'nın ikonik vadilerini ve simge noktalarını keşfedin",
+    title: "Kapadokya’nın ikonik vadilerini ve simge noktalarını keşfedin",
     description:
-      "Bu sayfa, Kapadokya paketimizin öne çıkan görsellerini paylaşır ve WhatsApp üzerinden planlama yapmadan önce rotanın kalitesini görmenize yardımcı olur.",
+      "Bu sayfa, Kapadokya paketimizin öne çıkan görsellerini sunar; WhatsApp üzerinden planlama öncesi rotayı daha iyi anlamanızı sağlar.",
     back: "Ana sayfaya dön",
-    cta: "Bu tur hakkında bilgi alın",
+    cta: "Tur hakkında bilgi alın",
     whatsappText:
-      "Merhaba Best Guides in Turkey, Kapadokya turu hakkında bilgi almak istiyorum.",
+      "Merhaba, Best Guides in Turkey. Kapadokya turu hakkında bilgi almak istiyorum.",
     locations: [
       {
         name: "Göreme Açık Hava Müzesi",
         image: "/images/cappadocia/goreme-open-air-museum.jpg",
         description:
-          "Kapadokya'nın en değerli kültürel miras alanlarından birindeki kaya oyma kiliseler ve freskler.",
+          "Kapadokya’nın en değerli miras alanlarından birindeki kaya oyma kiliseler ve freskler.",
       },
       {
         name: "Uçhisar Kalesi",
@@ -86,7 +86,7 @@ const copy = {
         name: "Kapadokya Balon Manzarası",
         image: "/images/cappadocia/cappadocia-hot-air-balloons.jpg",
         description:
-          "Premium Kapadokya deneyimini tanımlayan ikonik gün doğumu balon manzarası.",
+          "Kapadokya deneyimini özetleyen ikonik gün doğumu balon manzarası.",
       },
     ],
   },
