@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import IstanbulBackground from "../components/istanbul-background";
+import Navigation from "../components/navigation";
 import { LanguageProvider } from "../components/language-context";
-import LanguageToggle from "../components/language-toggle";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -44,10 +44,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col relative">
         <IstanbulBackground />
         <LanguageProvider>
-          <LanguageToggle />
+          <Navigation />
           <div className="relative z-10 flex min-h-screen flex-col">
             <div className="flex-1">{children}</div>
-            <footer className="mt-auto border-t border-white/15 bg-white/20 px-6 py-6 text-center text-sm text-[#1b3160] backdrop-blur-md">
+            <footer className="mt-auto border-t border-white/15 bg-white/20 px-6 py-6 text-center text-sm text-theme-muted backdrop-blur-md">
               All copyrights Atakan Design
             </footer>
           </div>

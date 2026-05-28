@@ -8,7 +8,6 @@ import {
   ArrowRight,
   BadgeCheck,
   CalendarDays,
-  Compass,
   Crown,
   MessageCircle,
   ShieldCheck,
@@ -392,37 +391,20 @@ export default function HomeContent() {
     <div className="relative isolate overflow-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_18%,rgba(56,189,248,0.2),transparent_34%),radial-gradient(circle_at_88%_8%,rgba(250,204,21,0.2),transparent_34%),radial-gradient(circle_at_48%_100%,rgba(139,92,246,0.18),transparent_38%)]" />
 
-      <main className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 py-10 md:px-10 lg:py-14">
-        <header className="flex items-center justify-between rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur-md">
-          <div className="flex items-center gap-3">
-            <div className="rounded-full bg-amber-300/20 p-2 text-amber-200">
-              <Compass className="size-4" />
-            </div>
-            <p className="text-sm font-semibold tracking-wide text-[#0a1f44]">
-              Best Guides in Turkey
-            </p>
-          </div>
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-emerald-300 px-4 py-2 text-sm font-semibold text-[#0a1f44] transition hover:bg-emerald-200"
-          >
-            <MessageCircle className="size-4" />
-            {t.whatsappHeader}
-          </a>
-        </header>
-
+      <main
+        id="hero"
+        className="mx-auto flex w-full max-w-6xl scroll-mt-24 flex-col gap-16 px-6 pb-10 pt-24 md:px-10 md:pt-28 lg:pb-14"
+      >
         <section className="grid items-start gap-8 lg:grid-cols-[1.2fr_0.8fr]">
           <div className={`space-y-6 ${frostedPanel}`}>
-            <p className="inline-flex items-center gap-2 rounded-full border border-amber-200/30 bg-amber-100/10 px-3 py-1 text-xs font-semibold tracking-[0.18em] text-[#0a1f44] uppercase">
+            <p className="inline-flex items-center gap-2 rounded-full border border-amber-200/30 bg-amber-100/10 px-3 py-1 text-xs font-semibold tracking-[0.18em] text-theme uppercase">
               <Stars className="size-3.5" />
               {t.heroLabel}
             </p>
-            <h1 className="max-w-3xl text-4xl font-semibold leading-tight text-[#0a1f44] md:text-6xl">
+            <h1 className="max-w-3xl text-4xl font-semibold leading-tight text-theme md:text-6xl">
               {t.heroTitle}
             </h1>
-            <p className="max-w-2xl text-lg leading-relaxed text-[#1b3160]">
+            <p className="max-w-2xl text-lg leading-relaxed text-theme-muted">
               {t.heroDescription}
             </p>
             <div className="flex flex-wrap gap-3">
@@ -430,14 +412,14 @@ export default function HomeContent() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-emerald-300 px-5 py-3 text-sm font-semibold text-[#0a1f44] shadow-[0_10px_30px_-12px_rgba(52,211,153,0.75)] transition hover:bg-emerald-200"
+                className="inline-flex items-center gap-2 rounded-full bg-emerald-300 px-5 py-3 text-sm font-semibold text-ink shadow-[0_10px_30px_-12px_rgba(52,211,153,0.75)] transition hover:bg-emerald-200"
               >
                 {t.planButton}
                 <ArrowRight className="size-4" />
               </a>
               <a
                 href="#tours"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-[#0a1f44] transition hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-theme transition hover:bg-white/10"
               >
                 {t.exploreButton}
               </a>
@@ -445,7 +427,7 @@ export default function HomeContent() {
           </div>
 
           <div className={frostedPanel}>
-            <p className="flex items-center gap-2 text-sm font-medium text-[#1b3160]">
+            <p className="flex items-center gap-2 text-sm font-medium text-theme-muted">
               <Sparkles className="size-4 text-sky-300" />
               {t.researchTitle}
             </p>
@@ -453,7 +435,7 @@ export default function HomeContent() {
               {t.travelInsights.map((insight) => (
                 <li key={insight} className="flex items-start gap-3">
                   <BadgeCheck className="mt-0.5 size-4 shrink-0 text-emerald-300" />
-                  <p className="text-sm leading-relaxed text-[#1b3160]">
+                  <p className="text-sm leading-relaxed text-theme-muted">
                     {insight}
                   </p>
                 </li>
@@ -462,8 +444,8 @@ export default function HomeContent() {
           </div>
         </section>
 
-        <section id="tours" className="space-y-5">
-          <h2 className="text-2xl font-semibold text-[#0a1f44] md:text-3xl">
+        <section id="tours" className="scroll-mt-24 space-y-5">
+          <h2 className="text-2xl font-semibold text-theme md:text-3xl">
             {t.toursTitle}
           </h2>
           <div className="grid gap-4 md:grid-cols-3">
@@ -481,22 +463,22 @@ export default function HomeContent() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/0 to-transparent" />
                   </div>
                   <div className="mt-4 flex flex-wrap items-center gap-2">
-                    <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-xs font-medium text-[#1b3160]">
+                    <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-xs font-medium text-theme-muted">
                       <CalendarDays className="size-3.5" />
                       {tour.duration}
                     </p>
-                    <p className="inline-flex items-center gap-2 rounded-full border border-emerald-200/40 bg-emerald-200/10 px-2.5 py-1 text-xs font-semibold text-[#0a1f44]">
+                    <p className="inline-flex items-center gap-2 rounded-full border border-emerald-200/40 bg-emerald-200/10 px-2.5 py-1 text-xs font-semibold text-theme">
                       <Crown className="size-3.5 text-amber-300" />
                       {t.priceLabel} {tour.price}
                     </p>
                   </div>
-                  <h3 className="mt-4 text-lg font-semibold text-[#0a1f44]">
+                  <h3 className="mt-4 text-lg font-semibold text-theme">
                     {tour.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[#1b3160]">
+                  <p className="mt-3 text-sm leading-relaxed text-theme-muted">
                     {tour.summary}
                   </p>
-                  <span className="mt-4 inline-flex items-center gap-2 rounded-full border border-emerald-200/40 bg-emerald-200/10 px-3.5 py-2 text-xs font-semibold tracking-wide text-[#0a1f44] transition group-hover:bg-emerald-200/20">
+                  <span className="mt-4 inline-flex items-center gap-2 rounded-full border border-emerald-200/40 bg-emerald-200/10 px-3.5 py-2 text-xs font-semibold tracking-wide text-theme transition group-hover:bg-emerald-200/20">
                     {tour.galleryLabel}
                     <ArrowRight className="size-3.5" />
                   </span>
@@ -516,15 +498,18 @@ export default function HomeContent() {
           </div>
         </section>
 
-        <section id="about" className="grid gap-4 md:grid-cols-[1.1fr_0.9fr]">
+        <section
+          id="about"
+          className="scroll-mt-24 grid gap-4 md:grid-cols-[1.1fr_0.9fr]"
+        >
           <article className={frostedPanel}>
-            <h2 className="text-2xl font-semibold text-[#0a1f44]">
+            <h2 className="text-2xl font-semibold text-theme">
               {t.aboutTitle}
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-[#1b3160]">
+            <p className="mt-3 text-sm leading-relaxed text-theme-muted">
               {t.aboutBody}
             </p>
-            <ul className="mt-4 space-y-2 text-sm text-[#1b3160]">
+            <ul className="mt-4 space-y-2 text-sm text-theme-muted">
               {aboutHighlights.map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <BadgeCheck className="mt-0.5 size-4 shrink-0 text-emerald-300" />
@@ -556,7 +541,7 @@ export default function HomeContent() {
                 type="button"
                 onClick={handleAboutPrev}
                 aria-label={t.aboutPrevLabel}
-                className="inline-flex size-9 items-center justify-center rounded-full bg-white/80 text-[#0a1f44] transition hover:bg-white"
+                className="inline-flex size-9 items-center justify-center rounded-full bg-white/80 text-ink transition hover:bg-white"
               >
                 <ArrowLeft className="size-4" />
               </button>
@@ -579,7 +564,7 @@ export default function HomeContent() {
                 type="button"
                 onClick={handleAboutNext}
                 aria-label={t.aboutNextLabel}
-                className="inline-flex size-9 items-center justify-center rounded-full bg-white/80 text-[#0a1f44] transition hover:bg-white"
+                className="inline-flex size-9 items-center justify-center rounded-full bg-white/80 text-ink transition hover:bg-white"
               >
                 <ArrowRight className="size-4" />
               </button>
@@ -587,12 +572,12 @@ export default function HomeContent() {
           </div>
         </section>
 
-        <section id="gallery" className="space-y-5">
+        <section id="gallery" className="scroll-mt-24 space-y-5">
           <div>
-            <h2 className="text-2xl font-semibold text-[#0a1f44] md:text-3xl">
+            <h2 className="text-2xl font-semibold text-theme md:text-3xl">
               {t.galleryTitle}
             </h2>
-            <p className="mt-2 max-w-2xl text-sm text-[#1b3160]">
+            <p className="mt-2 max-w-2xl text-sm text-theme-muted">
               {t.galleryBody}
             </p>
           </div>
@@ -616,11 +601,11 @@ export default function HomeContent() {
 
         <section className="grid gap-4 md:grid-cols-2">
           <article className={frostedPanel}>
-            <h2 className="flex items-center gap-2 text-xl font-semibold text-[#0a1f44]">
+            <h2 className="flex items-center gap-2 text-xl font-semibold text-theme">
               <Crown className="size-5 text-amber-300" />
               {t.whyTitle}
             </h2>
-            <ul className="mt-4 space-y-3 text-sm text-[#1b3160]">
+            <ul className="mt-4 space-y-3 text-sm text-theme-muted">
               {t.whyBullets.map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <Users className="mt-0.5 size-4 text-sky-300" />
@@ -631,33 +616,33 @@ export default function HomeContent() {
           </article>
 
           <article className={frostedPanel}>
-            <h2 className="flex items-center gap-2 text-xl font-semibold text-[#0a1f44]">
+            <h2 className="flex items-center gap-2 text-xl font-semibold text-theme">
               <ShieldCheck className="size-5 text-emerald-300" />
               {t.trustTitle}
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-[#1b3160]">
+            <p className="mt-3 text-sm leading-relaxed text-theme-muted">
               {t.trustBody}
             </p>
-            <div className="mt-4 rounded-xl border border-dashed border-emerald-200/30 bg-emerald-100/10 p-4 text-sm text-[#0a1f44]">
+            <div className="mt-4 rounded-xl border border-dashed border-emerald-200/30 bg-emerald-100/10 p-4 text-sm text-theme">
               {t.trustPlaceholder}
             </div>
           </article>
         </section>
 
         <section className={`space-y-5 ${frostedPanel}`}>
-          <h2 className="text-2xl font-semibold text-[#0a1f44]">
+          <h2 className="text-2xl font-semibold text-theme">
             {t.planningTitle}
           </h2>
           <div className="grid gap-3 md:grid-cols-2">
             {planningFlow.map((step, index) => (
               <article key={step.title} className={frostedPanel}>
-                <p className="text-xs font-semibold tracking-[0.16em] text-[#2b436e] uppercase">
+                <p className="text-xs font-semibold tracking-[0.16em] text-theme-muted uppercase">
                   Step {index + 1}
                 </p>
-                <h3 className="mt-2 text-base font-semibold text-[#0a1f44]">
+                <h3 className="mt-2 text-base font-semibold text-theme">
                   {step.title}
                 </h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-[#1b3160]">
+                <p className="mt-1.5 text-sm leading-relaxed text-theme-muted">
                   {step.description}
                 </p>
               </article>
@@ -667,34 +652,34 @@ export default function HomeContent() {
 
         <section className="grid gap-4 md:grid-cols-2">
           <article className={frostedPanel}>
-            <h2 className="text-xl font-semibold text-[#0a1f44]">
+            <h2 className="text-xl font-semibold text-theme">
               {t.missionTitle}
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-[#1b3160]">
+            <p className="mt-3 text-sm leading-relaxed text-theme-muted">
               {t.missionBody}
             </p>
           </article>
 
           <article className={frostedPanel}>
-            <h2 className="text-xl font-semibold text-[#0a1f44]">
+            <h2 className="text-xl font-semibold text-theme">
               {t.visionTitle}
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-[#1b3160]">
+            <p className="mt-3 text-sm leading-relaxed text-theme-muted">
               {t.visionBody}
             </p>
           </article>
         </section>
 
         <section id="contact" className={frostedPanel}>
-          <h2 className="text-2xl font-semibold text-[#0a1f44]">
+          <h2 className="text-2xl font-semibold text-theme">
             {t.contactTitle}
           </h2>
-          <p className="mt-3 max-w-2xl text-[#1b3160]">{t.contactBody}</p>
+          <p className="mt-3 max-w-2xl text-theme-muted">{t.contactBody}</p>
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center gap-2 rounded-full bg-emerald-300 px-5 py-3 text-sm font-semibold text-[#0a1f44] shadow-[0_10px_30px_-12px_rgba(52,211,153,0.75)] transition hover:bg-emerald-200"
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-emerald-300 px-5 py-3 text-sm font-semibold text-ink shadow-[0_10px_30px_-12px_rgba(52,211,153,0.75)] transition hover:bg-emerald-200"
           >
             <MessageCircle className="size-4" />
             {t.contactButton}

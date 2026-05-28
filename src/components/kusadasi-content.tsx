@@ -109,7 +109,7 @@ export default function KusadasiContent() {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold text-[#0a1f44] transition hover:bg-white/10"
+          className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold text-theme transition hover:bg-white/10"
         >
           <ArrowLeft className="size-4" />
           {t.back}
@@ -119,7 +119,7 @@ export default function KusadasiContent() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full bg-emerald-300 px-4 py-2 text-sm font-semibold text-[#0a1f44] transition hover:bg-emerald-200"
+          className="inline-flex items-center gap-2 rounded-full bg-emerald-300 px-4 py-2 text-sm font-semibold text-ink transition hover:bg-emerald-200"
         >
           <MessageCircle className="size-4" />
           {t.cta}
@@ -127,14 +127,14 @@ export default function KusadasiContent() {
       </div>
 
       <section className="space-y-4">
-        <p className="inline-flex items-center gap-2 rounded-full border border-sky-200/30 bg-sky-300/10 px-3 py-1 text-xs font-semibold tracking-[0.16em] text-[#0a1f44] uppercase">
+        <p className="inline-flex items-center gap-2 rounded-full border border-sky-200/30 bg-sky-300/10 px-3 py-1 text-xs font-semibold tracking-[0.16em] text-theme uppercase">
           <MapPinned className="size-3.5" />
           {t.badge}
         </p>
-        <h1 className="text-4xl font-semibold leading-tight text-[#0a1f44] md:text-5xl">
+        <h1 className="text-4xl font-semibold leading-tight text-theme md:text-5xl">
           {t.title}
         </h1>
-        <p className="max-w-3xl text-[#1b3160]">{t.description}</p>
+        <p className="max-w-3xl text-theme-muted">{t.description}</p>
       </section>
 
       <section className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -154,10 +154,10 @@ export default function KusadasiContent() {
               />
             </div>
             <div className="space-y-3 p-4">
-              <h2 className="text-lg font-semibold text-[#0a1f44]">
+              <h2 className="text-lg font-semibold text-theme">
                 {location.name}
               </h2>
-              <p className="text-sm leading-relaxed text-[#1b3160]">
+              <p className="text-sm leading-relaxed text-theme-muted">
                 {location.description}
               </p>
             </div>

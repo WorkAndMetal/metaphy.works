@@ -3,6 +3,16 @@
 :root {
   --background: #fffaf0;
   --foreground: #0a1f44;
+  --foreground-muted: #1b3160;
+  --ink: #0a1f44;
+  --background-overlay: rgba(255, 255, 255, 0.6);
+}
+
+.theme-dark {
+  --background: #050505;
+  --foreground: #f8fafc;
+  --foreground-muted: #cbd5f5;
+  --background-overlay: rgba(0, 0, 0, 0.75);
 }
 
 @theme inline {
@@ -18,12 +28,12 @@
 
 html {
   min-height: 100%;
-  background-color: #fffaf0;
+  background-color: var(--background);
 }
 
 body {
   min-height: 100vh;
-  background-color: #fffaf0;
+  background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
@@ -35,4 +45,31 @@ a {
 ::selection {
   background: rgba(201, 170, 102, 0.35);
   color: #0a1f44;
+}
+
+@layer utilities {
+  .text-theme {
+    color: var(--foreground);
+  }
+
+  .text-theme-muted {
+    color: var(--foreground-muted);
+  }
+
+  .text-ink {
+    color: var(--ink);
+  }
+}
+
+.theme-dark .language-toggle button[data-active="true"] {
+  background-color: rgba(255, 255, 255, 0.18);
+  color: var(--foreground);
+}
+
+.theme-dark .language-toggle button[data-active="false"] {
+  color: var(--foreground-muted);
+}
+
+.theme-dark .language-toggle button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
 }

@@ -21,7 +21,10 @@ export default function IstanbulBackground() {
           opacity,
         }}
       />
-      <div className="absolute inset-0 bg-white/60" />
+      <div
+        className="absolute inset-0"
+        style={{ backgroundColor: "var(--background-overlay)" }}
+      />
     </div>
   );
 }
