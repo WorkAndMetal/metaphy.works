@@ -624,7 +624,15 @@ export default function HomeContent() {
               {t.trustBody}
             </p>
             <div className="mt-4 rounded-xl border border-dashed border-emerald-200/30 bg-emerald-100/10 p-4 text-sm text-theme">
-              {t.trustPlaceholder}
+              <div className="flex items-center justify-center">
+                <Image
+                  src="/tursab.svg"
+                  alt="TÜRSAB license"
+                  width={220}
+                  height={80}
+                  className="h-12 w-auto"
+                />
+              </div>
             </div>
           </article>
         </section>
