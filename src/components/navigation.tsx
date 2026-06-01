@@ -9,16 +9,16 @@ import ThemeToggle from "./theme-toggle";
 
 const navLinks = {
   en: [
-    { label: "Home", href: "#hero" },
-    { label: "Tours", href: "#tours" },
-    { label: "About us", href: "#about" },
-    { label: "Photo gallery", href: "#gallery" },
+    { label: "Home", href: "/#hero" },
+    { label: "Tours", href: "/#tours" },
+    { label: "About us", href: "/#about" },
+    { label: "Photo Gallery", href: "/photo-gallery" },
   ],
   tr: [
-    { label: "Anasayfa", href: "#hero" },
-    { label: "Turlar", href: "#tours" },
-    { label: "Hakkımızda", href: "#about" },
-    { label: "Fotoğraf Galerisi", href: "#gallery" },
+    { label: "Anasayfa", href: "/#hero" },
+    { label: "Turlar", href: "/#tours" },
+    { label: "Hakkımızda", href: "/#about" },
+    { label: "Fotoğraf Galerisi", href: "/photo-gallery" },
   ],
 };
 
@@ -50,7 +50,7 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-20 border-b border-white/15 bg-white/10 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-3 md:px-10">
-        <Link href="#hero" className="flex items-center gap-2 text-sm font-semibold text-theme">
+        <Link href="/#hero" className="flex items-center gap-2 text-sm font-semibold text-theme">
           <div className="rounded-full bg-amber-300/20 p-2 text-amber-200">
             <Compass className="size-4" />
           </div>

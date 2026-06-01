@@ -172,6 +172,7 @@ const copy = {
     contactTitle: "Start your journey",
     contactBody:
       "Contact us on WhatsApp for full itinerary details, availability, and custom tours.",
+    contactEmailLabel: "Email",
     contactButton: "Contact on WhatsApp",
     whatsappText:
       "Hello Best Guides in Turkey, I would like to plan a private tour.",
@@ -329,6 +330,7 @@ const copy = {
     contactTitle: "Yolculuğunuza başlayın",
     contactBody:
       "Detaylı program, müsaitlik ve kişiye özel turlar için WhatsApp’tan bize ulaşın.",
+    contactEmailLabel: "E-posta",
     contactButton: "WhatsApp’tan iletişime geçin",
     whatsappText:
       "Merhaba, Best Guides in Turkey. Özel bir tur planlamak istiyorum.",
@@ -344,7 +346,6 @@ export default function HomeContent() {
   const signatureTours = t.signatureTours;
   const aboutHighlights = t.aboutHighlights;
   const aboutSlides = t.aboutSlides;
-  const galleryImages = t.galleryImages;
   const planningFlow = t.planningFlow;
   const [aboutSlideIndex, setAboutSlideIndex] = useState(0);
   const aboutSlidesCount = aboutSlides.length;
@@ -572,33 +573,6 @@ export default function HomeContent() {
           </div>
         </section>
 
-        <section id="gallery" className="scroll-mt-24 space-y-5">
-          <div>
-            <h2 className="text-2xl font-semibold text-theme md:text-3xl">
-              {t.galleryTitle}
-            </h2>
-            <p className="mt-2 max-w-2xl text-sm text-theme-muted">
-              {t.galleryBody}
-            </p>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
-            {galleryImages.map((image) => (
-              <div
-                key={image.src}
-                className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10"
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  sizes="(min-width: 768px) 30vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </section>
-
         <section className="grid gap-4 md:grid-cols-2">
           <article className={frostedPanel}>
             <h2 className="flex items-center gap-2 text-xl font-semibold text-theme">
@@ -683,6 +657,15 @@ export default function HomeContent() {
             {t.contactTitle}
           </h2>
           <p className="mt-3 max-w-2xl text-theme-muted">{t.contactBody}</p>
+          <div className="mt-4 flex flex-wrap items-center gap-2 text-sm text-theme-muted">
+            <span className="font-semibold text-theme">{t.contactEmailLabel}</span>
+            <a
+              href="mailto:baistsnbul@yahoo.com"
+              className="underline decoration-white/40 underline-offset-4 transition hover:text-theme"
+            >
+              baistsnbul@yahoo.com
+            </a>
+          </div>
           <a
             href={whatsappUrl}
             target="_blank"
